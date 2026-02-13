@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { FiCpu, FiBookOpen, FiWifi } from "react-icons/fi";
 
-export default function StatsSection() {
-  const stats = [
-    { id: 1, icon: FiCpu, value: 10, label: "Team members" },
-    { id: 2, icon: FiBookOpen, value: 200, label: "Projects Completed" },
-    { id: 3, icon: FiWifi, value: 50, label: "Active Clients" },
-  ];
+const stats = [
+  { id: 1, icon: FiCpu, value: 10, label: "Team members" },
+  { id: 2, icon: FiBookOpen, value: 200, label: "Projects Completed" },
+  { id: 3, icon: FiWifi, value: 50, label: "Active Clients" },
+];
 
+export default function StatsSection() {
   // Create state to store animated values
   const [counters, setCounters] = useState(stats.map(() => 0));
 
@@ -26,7 +26,7 @@ export default function StatsSection() {
     }, 20); // update every 20ms
 
     return () => clearInterval(interval);
-  }, [stats]);
+  }, []);
 
   return (
     <div className="w-full flex justify-center py-14 bg-[#f8fafc] mb-10">

@@ -1,6 +1,6 @@
 import React from "react";
 import '../assets/font.css'; // adjust path accordingly
-import Hero from "../assets/hero.png";
+import Hero from "../assets/Hero.png";
 
 export default function HeroSection() {
   return (
